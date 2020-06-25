@@ -118,7 +118,7 @@ module.exports = (Block, mcData) => {
 
     setBlockData (pos, data) {
       assertPos(pos)
-      // TODO
+      this.setBlockStateId(pos, mcData.blocksByStateId[this.getBlockStateId(pos)].minStateId + data)
     }
 
     setBlockLight (pos, light) {
